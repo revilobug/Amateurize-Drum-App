@@ -16,6 +16,8 @@ struct MidiNote {
     var nVelocity: UInt8 = 0
     var nStartTime: UInt32 = 0
     var nDuration : UInt32?
+    var xPos : Float?
+    var yPos : Float?
 }
 
 struct MidiSong {
