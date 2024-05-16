@@ -1,12 +1,10 @@
 //
-//  SKView.swift
+//  NoteVisualizer.swift
 //  Drum App
 //
-//  Created by Oliver Li on 8/21/23.
+//  Created by Oliver Li on 5/16/24.
 //
 
-import Foundation
-import SwiftUI
 import SpriteKit
 import DequeModule
 
@@ -114,12 +112,12 @@ final class MidiScene : SKScene {
         super.init(size: screenSize)  // Call the superclass's initializer
     }
 
-    required init?(coder aDecoder: NSCoder) 
+    required init?(coder aDecoder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func didMove(to view: SKView) 
+    override func didMove(to view: SKView)
     {
         isPaused = true
         backgroundColor = .clear
@@ -138,7 +136,7 @@ final class MidiScene : SKScene {
         run(SKAction.playSoundFileNamed("midi/silent", waitForCompletion: false))
     }
 
-    func changeBPM(newBPM: UInt32) 
+    func changeBPM(newBPM: UInt32)
     {
         let changeFactor = Double(newBPM) / Double(bpm)
         bpm = newBPM
@@ -153,7 +151,7 @@ final class MidiScene : SKScene {
 
         let startPos = song[rightIndex].xPos!
 
-        for index in rightIndex...(song.count-1) 
+        for index in rightIndex...(song.count-1)
         {
             let deltaPos = song[index].xPos! - startPos
             song[index].xPos = startPos + deltaPos / Float(changeFactor)
@@ -161,12 +159,12 @@ final class MidiScene : SKScene {
 
         leftIndex = rightIndex
 
-        while (!rendered.isEmpty) 
+        while (!rendered.isEmpty)
         {
             rendered.popFirst()?.removeFromParent()
         }
 
-        while (leftIndex < song.count) 
+        while (leftIndex < song.count)
         {
             if Double(song[leftIndex].xPos!) > cameraXLeft
             {
@@ -175,7 +173,7 @@ final class MidiScene : SKScene {
                 rendered.append(node)
                 addChild(node)
                 leftIndex += 1
-            } 
+            }
             else
             {
                 break
@@ -184,13 +182,13 @@ final class MidiScene : SKScene {
     }
 
     override func update(_ currentTime: TimeInterval) {
-        if prevTime == 0 
+        if prevTime == 0
         {
             prevTime = currentTime
         }
 
         let timeElapsed = currentTime - prevTime
-        if timeElapsed > 0.5 
+        if timeElapsed > 0.5
         {
             prevTime = currentTime
             return
@@ -202,7 +200,7 @@ final class MidiScene : SKScene {
         cameraXLeft = cameraXLeft - distanceElapsed
         cameraXRight = cameraXRight - distanceElapsed
 
-        while (leftIndex < song.count) 
+        while (leftIndex < song.count)
         {
             if Double(song[leftIndex].xPos!) > cameraXLeft
             {
@@ -211,16 +209,16 @@ final class MidiScene : SKScene {
                 rendered.append(node)
                 addChild(node)
                 leftIndex += 1
-            } 
+            }
             else
             {
                 break
             }
         }
 
-        while rendered.first != nil 
+        while rendered.first != nil
         {
-            if rendered.first!.position.x >= targetPosition 
+            if rendered.first!.position.x >= targetPosition
             {
                 let node = rendered.popFirst()
                 let name = "midi/" + node!.name!.suffix(2)
@@ -231,182 +229,15 @@ final class MidiScene : SKScene {
                 let sequence = SKAction.sequence([waitAction, removeAction])
 
                 run(sequence)
-            } 
+            }
             else
             {
                 break
             }
         }
-        for index in 0..<rendered.count 
+        for index in 0..<rendered.count
         {
             rendered[index].position.x += distanceElapsed
         }
     }
 }
-
-
-struct GameView: View {
-    @State private var isMenuVisible : Bool
-    @State private var isCountVisibile : Bool
-    @State var customScene : MidiScene
-    @Binding var currentView: AppView
-
-    init (currentView: Binding<AppView>, midiData: MidiSong) 
-    {
-        self.isMenuVisible = false
-        self.isCountVisibile = true
-        self.customScene = MidiScene(song: midiData.song,
-                                     bpm: midiData.m_nBPM,
-                                     tickLength: midiData.nTickLength)
-        self._currentView = currentView
-    }
-
-    var body: some View 
-    {
-        ZStack (alignment: .center)
-        {
-            VStack 
-            {
-                HStack
-                {
-                    Button(action: {isMenuVisible.toggle()}) 
-                    {
-                        Image("pause")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .frame(width:60, height: 60)
-                    }.padding(.top, 20).padding(.leading, 20).edgesIgnoringSafeArea(.all)
-                    Spacer()
-                }
-                Spacer()
-            }
-
-            .background(
-                ZStack
-                {
-                    Image("game-backdrop1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all)
-                    SpriteView(scene: customScene, options: [.allowsTransparency])
-                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                        .edgesIgnoringSafeArea(.all)
-                }
-            )
-            if isMenuVisible 
-            {
-                MenuView(newBPM: Float(customScene.bpm), customScene: $customScene, isMenuVisible: $isMenuVisible, isCountVisible: $isCountVisibile, currentView: $currentView).onAppear{customScene.isPaused = true}
-            }
-            if isCountVisibile 
-            {
-                CountdownView(show: $isCountVisibile, customScene: $customScene).onAppear{customScene.isPaused = true}
-            }
-        }
-    }
-}
-
-
-struct CountdownView: View {
-    @Binding var show: Bool
-    @Binding var customScene: MidiScene
-    @State private var counter = 3
-
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
-    var body: some View {
-        Color.black.opacity(0.8)
-            .edgesIgnoringSafeArea(.all)
-            .overlay(
-                Text("\(counter)")
-                    .font(.system(size: 100))
-                    .foregroundColor(.white)
-            )
-            .onReceive(timer) { _ in
-                if counter > 0 {
-                    counter -= 1
-                } else {
-                    timer.upstream.connect().cancel()  // Stop the timer when countdown is over
-                    customScene.isPaused = false
-                    show = false
-                }
-            }
-    }
-}
-
-struct MenuView : View {
-    enum MenuState {
-        case home
-        case mainMenu
-        case settings
-        case changeBPM
-    }
-
-    @State private var currentMenu : MenuState = .home
-    @State var newBPM : Float = 0.0
-    @Binding var customScene: MidiScene
-    @Binding var isMenuVisible : Bool
-    @Binding var isCountVisible : Bool
-    @Binding var currentView: AppView
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
-
-    var body: some View {
-        VStack {
-            Spacer()
-            HStack{
-                Spacer()
-                ZStack{
-                    Rectangle()
-                        .fill(.white)
-                        .frame(width: screenWidth * 0.6, height: screenHeight * 0.6)
-                        .cornerRadius(10)
-                    switch currentMenu {
-                    case .home:
-                    VStack{
-                        Button (action: {currentView = .home}) {Text("Main Menu")}
-                        .frame(width: screenWidth * 0.5, height: screenHeight * 0.1)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        Button (action: {currentMenu = .settings}) {Text("Settings")}
-                        .frame(width: screenWidth * 0.5, height: screenHeight * 0.1)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-
-                        Button (action: {currentMenu = .changeBPM}) {Text("Change BPM")}
-                        .frame(width: screenWidth * 0.5, height: screenHeight * 0.1)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-
-                        Button(action: {
-                            isMenuVisible = false
-                            isCountVisible = true
-                        }) {Text("Close")}
-                        .frame(width: screenWidth * 0.5, height: screenHeight * 0.1)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                    }
-                    case .changeBPM:
-                    VStack{
-                        Text("BPM: \(Int(newBPM))")
-                            .font(.headline)
-
-                        Slider(value: $newBPM, in: 10...240)
-                            .frame(width: 200)  // adjust this value as needed
-                        Button (action: {
-                            customScene.changeBPM(newBPM: UInt32(newBPM))
-                            currentMenu = .home
-                        }) {Text("Looks Good!")}
-                    }
-                    case .mainMenu:
-                        EmptyView()
-                    case .settings:
-                        EmptyView()
-                    }
-                }
-                Spacer()
-            }
-            Spacer()
-        }
-    }
-}
-

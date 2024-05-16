@@ -12,7 +12,11 @@
 		2503E8B32BF699F9008D33F2 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B22BF699F9008D33F2 /* LoadingViewModel.swift */; };
 		2503E8B52BF69BC4008D33F2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B42BF69BC4008D33F2 /* Queue.swift */; };
 		2503E8B72BF6B4D5008D33F2 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B62BF6B4D5008D33F2 /* Nodes.swift */; };
-		2534BEF32A88544500073F24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534BEF22A88544500073F24 /* ContentView.swift */; };
+		2503E8B92BF6BCE2008D33F2 /* NoteVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B82BF6BCE2008D33F2 /* NoteVisualizer.swift */; };
+		2503E8BE2BF6BE38008D33F2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8BD2BF6BE38008D33F2 /* MenuView.swift */; };
+		2503E8C02BF6BE5B008D33F2 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8BF2BF6BE5B008D33F2 /* CountdownView.swift */; };
+		2503E8C22BF6BE91008D33F2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8C12BF6BE91008D33F2 /* GameView.swift */; };
+		2503E8C52BF6BEF9008D33F2 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8C42BF6BEF9008D33F2 /* Controller.swift */; };
 		2534BEF52A887A8000073F24 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534BEF42A887A8000073F24 /* HomeView.swift */; };
 		2534BEF72A887B4F00073F24 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534BEF62A887B4F00073F24 /* LoadingView.swift */; };
 		2534BF0E2A8B43D100073F24 /* midi in Resources */ = {isa = PBXBuildFile; fileRef = 2534BF0D2A8B43D100073F24 /* midi */; };
@@ -24,7 +28,6 @@
 		253B3EE32A608A0600566287 /* Drum_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EE22A608A0600566287 /* Drum_AppUITestsLaunchTests.swift */; };
 		253B3EF02A608A6300566287 /* Upload_File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EEF2A608A6300566287 /* Upload_File.swift */; };
 		257359702A64C7A300D9D536 /* MIDIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573596F2A64C7A300D9D536 /* MIDIParser.swift */; };
-		258157E02A9420710053C7D3 /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258157DF2A9420710053C7D3 /* SKView.swift */; };
 		258157E52A9493470053C7D3 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 258157E42A9493470053C7D3 /* DequeModule */; };
 		25E22F632A7597DD00030B56 /* Smells_Like_Teen_Spirit_.mid in Resources */ = {isa = PBXBuildFile; fileRef = 25E22F622A7597DD00030B56 /* Smells_Like_Teen_Spirit_.mid */; };
 		25E7B2E32A71BEDB007635FE /* testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7B2E22A71BEDB007635FE /* testing.swift */; };
@@ -54,7 +57,11 @@
 		2503E8B22BF699F9008D33F2 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		2503E8B42BF69BC4008D33F2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2503E8B62BF6B4D5008D33F2 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
-		2534BEF22A88544500073F24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2503E8B82BF6BCE2008D33F2 /* NoteVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVisualizer.swift; sourceTree = "<group>"; };
+		2503E8BD2BF6BE38008D33F2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		2503E8BF2BF6BE5B008D33F2 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		2503E8C12BF6BE91008D33F2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		2503E8C42BF6BEF9008D33F2 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		2534BEF42A887A8000073F24 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2534BEF62A887B4F00073F24 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2534BF0D2A8B43D100073F24 /* midi */ = {isa = PBXFileReference; lastKnownFileType = folder; name = midi; path = "../../Downloads/Real Drums Vol. 1/midi"; sourceTree = "<group>"; };
@@ -69,7 +76,6 @@
 		253B3EE22A608A0600566287 /* Drum_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drum_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		253B3EEF2A608A6300566287 /* Upload_File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload_File.swift; sourceTree = "<group>"; };
 		2573596F2A64C7A300D9D536 /* MIDIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIParser.swift; sourceTree = "<group>"; };
-		258157DF2A9420710053C7D3 /* SKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
 		25E22F622A7597DD00030B56 /* Smells_Like_Teen_Spirit_.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = Smells_Like_Teen_Spirit_.mid; sourceTree = SOURCE_ROOT; };
 		25E7B2E22A71BEDB007635FE /* testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testing.swift; sourceTree = "<group>"; };
 		25E7B2E42A7311D5007635FE /* BackwardStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardStream.swift; sourceTree = "<group>"; };
@@ -122,10 +128,12 @@
 		2503E8AE2BF698FB008D33F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2534BEF22A88544500073F24 /* ContentView.swift */,
-				258157DF2A9420710053C7D3 /* SKView.swift */,
+				2503E8BC2BF6BE26008D33F2 /* MenuView */,
+				2503E8BB2BF6BE1A008D33F2 /* CountdownView */,
+				2503E8BA2BF6BE12008D33F2 /* GameView */,
 				2503E8AA2BF66B29008D33F2 /* HomeView */,
 				2503E8AD2BF67E3C008D33F2 /* LoadingView */,
+				2503E8C42BF6BEF9008D33F2 /* Controller.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,8 +147,33 @@
 				2503E8B02BF69930008D33F2 /* AlertItem.swift */,
 				2503E8B42BF69BC4008D33F2 /* Queue.swift */,
 				2503E8B62BF6B4D5008D33F2 /* Nodes.swift */,
+				2503E8B82BF6BCE2008D33F2 /* NoteVisualizer.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2503E8BA2BF6BE12008D33F2 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				2503E8C12BF6BE91008D33F2 /* GameView.swift */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		2503E8BB2BF6BE1A008D33F2 /* CountdownView */ = {
+			isa = PBXGroup;
+			children = (
+				2503E8BF2BF6BE5B008D33F2 /* CountdownView.swift */,
+			);
+			path = CountdownView;
+			sourceTree = "<group>";
+		};
+		2503E8BC2BF6BE26008D33F2 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				2503E8BD2BF6BE38008D33F2 /* MenuView.swift */,
+			);
+			path = MenuView;
 			sourceTree = "<group>";
 		};
 		253B3EB92A608A0400566287 = {
@@ -341,16 +374,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2503E8B92BF6BCE2008D33F2 /* NoteVisualizer.swift in Sources */,
 				2503E8B12BF69930008D33F2 /* AlertItem.swift in Sources */,
-				258157E02A9420710053C7D3 /* SKView.swift in Sources */,
 				253B3EF02A608A6300566287 /* Upload_File.swift in Sources */,
-				2534BEF32A88544500073F24 /* ContentView.swift in Sources */,
+				2503E8C22BF6BE91008D33F2 /* GameView.swift in Sources */,
 				2503E8B52BF69BC4008D33F2 /* Queue.swift in Sources */,
 				2503E8AC2BF66B58008D33F2 /* HomeViewModel.swift in Sources */,
 				257359702A64C7A300D9D536 /* MIDIParser.swift in Sources */,
 				25E7B2E52A7311D5007635FE /* BackwardStream.swift in Sources */,
+				2503E8C52BF6BEF9008D33F2 /* Controller.swift in Sources */,
+				2503E8BE2BF6BE38008D33F2 /* MenuView.swift in Sources */,
 				2534BEF52A887A8000073F24 /* HomeView.swift in Sources */,
 				25E7B2E32A71BEDB007635FE /* testing.swift in Sources */,
+				2503E8C02BF6BE5B008D33F2 /* CountdownView.swift in Sources */,
 				253B3EC62A608A0400566287 /* DrumApp.swift in Sources */,
 				2503E8B72BF6B4D5008D33F2 /* Nodes.swift in Sources */,
 				2534BEF72A887B4F00073F24 /* LoadingView.swift in Sources */,
