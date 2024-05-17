@@ -143,14 +143,16 @@ final class MidiScene : SKScene {
 
         rightIndex = leftIndex
 
+        // move from left most displayed node rightwards
         while (rightIndex > 0) && (Double(song[rightIndex].xPos!) < cameraXRight)
         {
             rightIndex -= 1
         }
+        // because while loop above moves one too far
         rightIndex += 1
 
+        // shift
         let startPos = song[rightIndex].xPos!
-
         for index in rightIndex...(song.count-1)
         {
             let deltaPos = song[index].xPos! - startPos
@@ -179,7 +181,10 @@ final class MidiScene : SKScene {
                 break
             }
         }
+        
+        prevTime = -1
     }
+    
 
     override func update(_ currentTime: TimeInterval) {
         if prevTime == 0

@@ -5,20 +5,19 @@
 //  Created by Oliver Li on 8/21/23.
 //
 
-import Foundation
 import SwiftUI
 import SpriteKit
 
 struct GameView: View {
     @State private var isMenuVisible : Bool
-    @State private var isCountVisibile : Bool
+    @State private var isCountVisible : Bool
     @State var customScene : MidiScene
     @Binding var currentView: AppView
 
     init (currentView: Binding<AppView>, midiData: MidiSong)
     {
         self.isMenuVisible = false
-        self.isCountVisibile = true
+        self.isCountVisible = true
         self.customScene = MidiScene(song: midiData.song,
                                      bpm: midiData.m_nBPM,
                                      tickLength: midiData.nTickLength)
@@ -59,11 +58,11 @@ struct GameView: View {
             )
             if isMenuVisible
             {
-                MenuView(newBPM: Float(customScene.bpm), customScene: $customScene, isMenuVisible: $isMenuVisible, isCountVisible: $isCountVisibile, currentView: $currentView).onAppear{customScene.isPaused = true}
+                MenuView(customScene: $customScene, isMenuVisible: $isMenuVisible, isCountVisible: $isCountVisible, currentView: $currentView).onAppear{customScene.isPaused = true}
             }
-            if isCountVisibile
+            if isCountVisible
             {
-                CountdownView(show: $isCountVisibile, customScene: $customScene).onAppear{customScene.isPaused = true}
+                CountdownView(show: $isCountVisible, customScene: $customScene).onAppear{customScene.isPaused = true}
             }
         }
     }
