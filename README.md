@@ -8,7 +8,7 @@ I started learning to play the drums a year ago. I had some experience playing t
 
 I ventured to create this app because how I ended up learning the Amen Break was by slowing down a YouTube video until all sense of rhythm and cohesion was broken. When the song was slowed down enough, I didn't need to think about timing, but instead, just smack the drum when the time was right. 
 
-![Watch the Demo!]((https://youtu.be/WO3lgb0i0aw))
+![Watch the Demo!](https://youtu.be/WO3lgb0i0aw) [https://youtu.be/WO3lgb0i0aw]
 
 My envisioned usage of this app is the same. Load up a track. Slow it down. And simply smack when the note falls in place. Then gradually speed the track up after a few repititions.
 
