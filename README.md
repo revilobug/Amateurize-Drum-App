@@ -20,7 +20,6 @@ My envisioned usage of this app is the same. Load up a track. Slow it down. And 
 
 ## To-do Agenda
 
-- Find sprites and assets
-- Time Reversal (5s, 10s, 15s...)
-- Loop Markers (Create an infinite loop by setting two markers)
-- Audio On/Off
+- Touch up on graphics
+- Add more sounds
+- Add more customizable settings
