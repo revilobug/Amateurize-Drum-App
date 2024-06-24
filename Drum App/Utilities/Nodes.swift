@@ -7,31 +7,21 @@
 
 import SpriteKit
 
-class InstrumentNode: SKNode 
+class LetterNode: SKSpriteNode 
 {
     
-    private let shapeNode: SKShapeNode
-    private let nameLabel: SKLabelNode
-
-    init(instrument: String, position: CGPoint) 
+    private let character: Character
+    
+    init(character: Character, font: String)
     {
-        self.shapeNode = SKShapeNode(circleOfRadius: 15)
-        self.nameLabel = SKLabelNode(text: instrument)
+        self.character = character
         
-        super.init()
+        // Check if the character is uppercase, if not, convert it to uppercase
+        let processedCharacter = character.isUppercase ? character : Character(character.uppercased())
+        let texture = SKTexture(imageNamed: "\(font)_\(processedCharacter)")
         
-        self.shapeNode.fillColor = SKColor.clear
-        self.shapeNode.strokeColor = SKColor.black
-        self.shapeNode.lineWidth = 3
-        self.shapeNode.position = CGPoint(x: 0, y: 0) // Local position within the parent node
-        
-        self.nameLabel.position = CGPoint(x: 0, y: 20) // Adjust relative position to the shape node
-        
-        self.addChild(shapeNode)
-        self.addChild(nameLabel)
-        
-        // Set the position of the entire node
-        self.position = position
+        super.init(texture: texture, color: .clear, size: texture.size())
+        self.name = String(processedCharacter)
     }
     
     required init?(coder aDecoder: NSCoder) 
@@ -40,22 +30,20 @@ class InstrumentNode: SKNode
     }
 }
 
-final class NoteNode: SKNode
+class TextNode: SKNode
 {
-    private let shapeNode: SKShapeNode
-
-    init(instrument: String, position: CGPoint)
+    init(text: String, font: String = "game")
     {
-        self.shapeNode = SKShapeNode(circleOfRadius: 12)
-        
         super.init()
         
-        self.shapeNode.fillColor = SKColor.black
-        self.shapeNode.position = CGPoint(x: 0, y: 0) // Local position within the parent node
-        self.addChild(shapeNode)
-
-        self.name = instrument
-        self.position = position
+        // Iterate over each character in the text
+        for (index, character) in text.enumerated() {
+            let letterNode = LetterNode(character: character, font: font)
+            
+            letterNode.position = CGPoint(x: index * Int(letterNode.size.width), y: 0)
+            
+            self.addChild(letterNode)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -63,3 +51,77 @@ final class NoteNode: SKNode
     }
 }
 
+class InstrumentNode: SKNode {
+    
+    private var spriteNode: SKSpriteNode
+    public var midiKey: UInt8
+//    private var nameLabel: TextNode
+
+    init(instrument: UInt8, position: CGPoint) {
+        self.spriteNode = SKSpriteNode()
+        self.midiKey = instrument
+        super.init()
+        
+        self.position = position
+        self.addChild(spriteNode)
+        setupInstrument(instrument)
+    }
+    
+    func changeInstrument(to newInstrument: UInt8) {
+        setupInstrument(newInstrument)
+        self.midiKey = newInstrument
+    }
+    
+    private func setupInstrument(_ instrument: UInt8) {
+        if instrument == self.midiKey{
+            return
+        }
+        let instrumentName = getInstrumentString(for: instrument)
+        
+        if let name = instrumentName {
+            self.spriteNode.texture = SKTexture(imageNamed: "\(instrument)_image_silhouette")
+            self.spriteNode.size = CGSize(width: 64, height: 64)
+        } else {
+            self.spriteNode.texture = nil
+            self.spriteNode.size = CGSize(width: 0, height: 0)
+        }
+        
+        self.spriteNode.position = CGPoint(x: 0, y: 0)
+        if instrument == 57 || instrument == 49 {
+            self.spriteNode.position = CGPoint(x: 0, y: 16)
+        }
+
+    }
+
+    required init?(coder aDecoder: NSCoder) 
+    {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+final class NoteNode: SKNode
+{
+    private let spriteNode: SKSpriteNode
+    public var midiKey: UInt8
+
+    init(midiKey: UInt8, position: CGPoint)
+    {
+        self.spriteNode = SKSpriteNode(imageNamed: "\(midiKey)_image")
+        self.midiKey = midiKey
+        
+        super.init()
+        self.position = position
+        
+        self.spriteNode.position = CGPoint(x: 0, y: 0)
+        self.addChild(spriteNode)
+    }
+    
+    func playSound ()
+    {
+        run(SKAction.playSoundFileNamed(String(self.midiKey), waitForCompletion: false))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

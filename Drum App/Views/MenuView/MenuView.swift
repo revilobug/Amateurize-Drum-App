@@ -30,8 +30,6 @@ struct MenuView: View {
     @Binding var isCountVisible: Bool
     @Binding var currentView: AppView
     @State var bpmDisplay: Double
-    let menuWidth = UIScreen.main.bounds.width * 0.6
-    let menuHeight = UIScreen.main.bounds.height * 0.6
     
     init(customScene: Binding<MidiScene>,
          isMenuVisible: Binding<Bool>,
@@ -46,28 +44,29 @@ struct MenuView: View {
     }
     
     var body: some View {
-        VStack {
-            Spacer()
-            HStack {
+        ZStack{
+            Color.white.opacity(0.5)
+
+            VStack {
                 Spacer()
-                ZStack {
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: menuWidth, height: menuHeight)
-                        .cornerRadius(10)
-                    
-                    switch viewModel.currentMenu {
-                    case .home:
-                        HomeMenuView(viewModel: viewModel, currentView: $currentView, menuWidth: menuWidth, menuHeight: menuHeight, isMenuVisible: $isMenuVisible, isCountVisible: $isCountVisible)
-                    case .changeBPM:
-                        ChangeBPMMenuView(viewModel: viewModel, customScene: $customScene, bpmDisplay: $bpmDisplay, menuWidth: menuWidth)
-                    case .settings:
-                        SettingsMenuView()
+                HStack {
+                    Spacer()
+                    ZStack {
+                        Image("smaller-menu")
+                        
+                        switch viewModel.currentMenu {
+                        case .home:
+                            HomeMenuView(viewModel: viewModel, currentView: $currentView, isMenuVisible: $isMenuVisible, isCountVisible: $isCountVisible)
+                        case .changeBPM:
+                            ChangeBPMMenuView(viewModel: viewModel, customScene: $customScene, bpmDisplay: $bpmDisplay)
+                        case .settings:
+                            SettingsMenuView()
+                        }
                     }
+                    Spacer()
                 }
                 Spacer()
             }
-            Spacer()
         }
     }
 }
@@ -75,43 +74,41 @@ struct MenuView: View {
 struct HomeMenuView: View {
     @ObservedObject var viewModel: MenuViewModel
     @Binding var currentView: AppView
-    let menuWidth: CGFloat
-    let menuHeight: CGFloat
     @Binding var isMenuVisible: Bool
     @Binding var isCountVisible: Bool
+    @State private var isFlickering = false
     
     var body: some View {
         VStack {
+            Image("paused").padding(.top, 10)            
+                .opacity(isFlickering ? 0.3 : 1.0) // Change opacity between 0.1 and 1.0
+                .onAppear {
+                    // Create a Timer that toggles the flickering effect
+                    Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { timer in
+                        isFlickering.toggle() // Toggle the flickering state
+                    }
+                }
+
             Button(action: { currentView = .home }) {
-                Text("Main Menu")
+                ZStack{
+                    Image("b-home")
+                }
             }
-            .frame(width: menuWidth * 0.95, height: menuHeight / 5)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            
-            Button(action: { viewModel.currentMenu = .settings }) {
-                Text("Settings")
-            }
-            .frame(width: menuWidth * 0.95, height: menuHeight / 5)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            
+                        
             Button(action: { viewModel.currentMenu = .changeBPM }) {
-                Text("Change BPM")
+                ZStack{
+                    Image("b-bpm")
+                }
             }
-            .frame(width: menuWidth * 0.95, height: menuHeight / 5)
-            .background(Color.blue)
-            .foregroundColor(.white)
             
             Button(action: {
                 isMenuVisible = false
                 isCountVisible = true
             }) {
-                Text("Close")
+                ZStack{
+                    Image("b-close")
+                }
             }
-            .frame(width: menuWidth * 0.95, height: menuHeight / 5)
-            .background(Color.blue)
-            .foregroundColor(.white)
         }
     }
 }
@@ -120,20 +117,31 @@ struct ChangeBPMMenuView: View {
     @ObservedObject var viewModel: MenuViewModel
     @Binding var customScene: MidiScene
     @Binding var bpmDisplay: Double
-    let menuWidth: CGFloat
+    @State private var displayText: String = ""
     
     var body: some View {
         VStack {
-            Text("BPM: \(Int(bpmDisplay))")
-                .font(.headline)
+            TextImageView(text: $displayText, font: "game")
+                .padding(.top, 20)
+                .padding(.bottom, 20)
             
+
             Slider(value: $bpmDisplay, in: 10...240)
-                .frame(width: 200)  // adjust this value as needed
+                .frame(width: 200)
+                .onChange(of: bpmDisplay) { newValue in
+                    displayText = "BPM: \(Int(newValue))"
+                }                
+                .padding(.bottom, 10)
+
             
             Button(action: {
                 viewModel.changeBPM(to: bpmDisplay, customScene: customScene)
             }) {
-                Text("Looks Good!")
+                Image("b-ok!")
+            }
+            .onAppear {
+                // Set displayText based on the initial value of bpmDisplay when the view appears
+                displayText = "BPM: \(Int(bpmDisplay))"
             }
         }
     }

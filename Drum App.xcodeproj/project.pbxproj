@@ -12,14 +12,26 @@
 		2503E8B32BF699F9008D33F2 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B22BF699F9008D33F2 /* LoadingViewModel.swift */; };
 		2503E8B52BF69BC4008D33F2 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B42BF69BC4008D33F2 /* Queue.swift */; };
 		2503E8B72BF6B4D5008D33F2 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B62BF6B4D5008D33F2 /* Nodes.swift */; };
-		2503E8B92BF6BCE2008D33F2 /* NoteVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8B82BF6BCE2008D33F2 /* NoteVisualizer.swift */; };
 		2503E8BE2BF6BE38008D33F2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8BD2BF6BE38008D33F2 /* MenuView.swift */; };
 		2503E8C02BF6BE5B008D33F2 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8BF2BF6BE5B008D33F2 /* CountdownView.swift */; };
 		2503E8C22BF6BE91008D33F2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8C12BF6BE91008D33F2 /* GameView.swift */; };
 		2503E8C52BF6BEF9008D33F2 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503E8C42BF6BEF9008D33F2 /* Controller.swift */; };
+		2503EA5E2C0B92AB008D33F2 /* 36.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA552C0B92AB008D33F2 /* 36.wav */; };
+		2503EA5F2C0B92AB008D33F2 /* 38.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA562C0B92AB008D33F2 /* 38.wav */; };
+		2503EA602C0B92AB008D33F2 /* 40.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA572C0B92AB008D33F2 /* 40.wav */; };
+		2503EA612C0B92AB008D33F2 /* 41.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA582C0B92AB008D33F2 /* 41.wav */; };
+		2503EA622C0B92AB008D33F2 /* 42.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA592C0B92AB008D33F2 /* 42.wav */; };
+		2503EA632C0B92AB008D33F2 /* 46.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA5A2C0B92AB008D33F2 /* 46.wav */; };
+		2503EA642C0B92AB008D33F2 /* 49.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA5B2C0B92AB008D33F2 /* 49.wav */; };
+		2503EA652C0B92AB008D33F2 /* 57.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2503EA5C2C0B92AB008D33F2 /* 57.wav */; };
+		2503EA692C14D252008D33F2 /* InstrumentUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2503EA682C14D252008D33F2 /* InstrumentUtils.swift */; };
 		2534BEF52A887A8000073F24 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534BEF42A887A8000073F24 /* HomeView.swift */; };
 		2534BEF72A887B4F00073F24 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2534BEF62A887B4F00073F24 /* LoadingView.swift */; };
-		2534BF0E2A8B43D100073F24 /* midi in Resources */ = {isa = PBXBuildFile; fileRef = 2534BF0D2A8B43D100073F24 /* midi */; };
+		253558AB2C28B5CF00B26D77 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253558AA2C28B5CF00B26D77 /* Font.swift */; };
+		253558AD2C28E62C00B26D77 /* Silent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 253558AC2C28E62C00B26D77 /* Silent.wav */; };
+		253558B12C29431B00B26D77 /* NoteVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253558B02C29431B00B26D77 /* NoteVisualizer.swift */; };
+		253558B42C2948C500B26D77 /* VCR_OSD_MONO_1.001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 253558B32C2948C500B26D77 /* VCR_OSD_MONO_1.001.ttf */; };
+		253558B62C2949C100B26D77 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 253558B52C2949C000B26D77 /* Minecraft.ttf */; };
 		253B3EC62A608A0400566287 /* DrumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EC52A608A0400566287 /* DrumApp.swift */; };
 		253B3ECA2A608A0500566287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253B3EC92A608A0500566287 /* Assets.xcassets */; };
 		253B3ECD2A608A0500566287 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253B3ECC2A608A0500566287 /* Preview Assets.xcassets */; };
@@ -57,14 +69,27 @@
 		2503E8B22BF699F9008D33F2 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		2503E8B42BF69BC4008D33F2 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2503E8B62BF6B4D5008D33F2 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
-		2503E8B82BF6BCE2008D33F2 /* NoteVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVisualizer.swift; sourceTree = "<group>"; };
 		2503E8BD2BF6BE38008D33F2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2503E8BF2BF6BE5B008D33F2 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		2503E8C12BF6BE91008D33F2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		2503E8C42BF6BEF9008D33F2 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		2503EA552C0B92AB008D33F2 /* 36.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 36.wav; sourceTree = "<group>"; };
+		2503EA562C0B92AB008D33F2 /* 38.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 38.wav; sourceTree = "<group>"; };
+		2503EA572C0B92AB008D33F2 /* 40.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 40.wav; sourceTree = "<group>"; };
+		2503EA582C0B92AB008D33F2 /* 41.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 41.wav; sourceTree = "<group>"; };
+		2503EA592C0B92AB008D33F2 /* 42.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 42.wav; sourceTree = "<group>"; };
+		2503EA5A2C0B92AB008D33F2 /* 46.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 46.wav; sourceTree = "<group>"; };
+		2503EA5B2C0B92AB008D33F2 /* 49.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 49.wav; sourceTree = "<group>"; };
+		2503EA5C2C0B92AB008D33F2 /* 57.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 57.wav; sourceTree = "<group>"; };
+		2503EA682C14D252008D33F2 /* InstrumentUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentUtils.swift; sourceTree = "<group>"; };
 		2534BEF42A887A8000073F24 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2534BEF62A887B4F00073F24 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		2534BF0D2A8B43D100073F24 /* midi */ = {isa = PBXFileReference; lastKnownFileType = folder; name = midi; path = "../../Downloads/Real Drums Vol. 1/midi"; sourceTree = "<group>"; };
+		253558AA2C28B5CF00B26D77 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		253558AC2C28E62C00B26D77 /* Silent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Silent.wav; sourceTree = "<group>"; };
+		253558B02C29431B00B26D77 /* NoteVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVisualizer.swift; sourceTree = "<group>"; };
+		253558B22C29470300B26D77 /* Drum-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Drum-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		253558B32C2948C500B26D77 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VCR_OSD_MONO_1.001.ttf; path = Assets.xcassets/VCR_OSD_MONO_1.001.dataset/VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
+		253558B52C2949C000B26D77 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		253B3EC22A608A0400566287 /* Drum App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drum App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		253B3EC52A608A0400566287 /* DrumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumApp.swift; sourceTree = "<group>"; };
 		253B3EC92A608A0500566287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +172,9 @@
 				2503E8B02BF69930008D33F2 /* AlertItem.swift */,
 				2503E8B42BF69BC4008D33F2 /* Queue.swift */,
 				2503E8B62BF6B4D5008D33F2 /* Nodes.swift */,
-				2503E8B82BF6BCE2008D33F2 /* NoteVisualizer.swift */,
+				2503EA682C14D252008D33F2 /* InstrumentUtils.swift */,
+				253558AA2C28B5CF00B26D77 /* Font.swift */,
+				253558B02C29431B00B26D77 /* NoteVisualizer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -176,10 +203,25 @@
 			path = MenuView;
 			sourceTree = "<group>";
 		};
+		2503EA5D2C0B92AB008D33F2 /* midi */ = {
+			isa = PBXGroup;
+			children = (
+				2503EA552C0B92AB008D33F2 /* 36.wav */,
+				2503EA562C0B92AB008D33F2 /* 38.wav */,
+				253558AC2C28E62C00B26D77 /* Silent.wav */,
+				2503EA572C0B92AB008D33F2 /* 40.wav */,
+				2503EA582C0B92AB008D33F2 /* 41.wav */,
+				2503EA592C0B92AB008D33F2 /* 42.wav */,
+				2503EA5A2C0B92AB008D33F2 /* 46.wav */,
+				2503EA5B2C0B92AB008D33F2 /* 49.wav */,
+				2503EA5C2C0B92AB008D33F2 /* 57.wav */,
+			);
+			path = midi;
+			sourceTree = "<group>";
+		};
 		253B3EB92A608A0400566287 = {
 			isa = PBXGroup;
 			children = (
-				2534BF0D2A8B43D100073F24 /* midi */,
 				253B3ED52A608A0600566287 /* Drum AppTests */,
 				253B3EC42A608A0400566287 /* Drum App */,
 				253B3EDF2A608A0600566287 /* Drum AppUITests */,
@@ -200,6 +242,10 @@
 		253B3EC42A608A0400566287 /* Drum App */ = {
 			isa = PBXGroup;
 			children = (
+				253558B52C2949C000B26D77 /* Minecraft.ttf */,
+				253558B32C2948C500B26D77 /* VCR_OSD_MONO_1.001.ttf */,
+				253558B22C29470300B26D77 /* Drum-App-Info.plist */,
+				2503EA5D2C0B92AB008D33F2 /* midi */,
 				2503E8AF2BF69913008D33F2 /* Utilities */,
 				2503E8AE2BF698FB008D33F2 /* Views */,
 				253B3EC52A608A0400566287 /* DrumApp.swift */,
@@ -346,9 +392,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2503EA652C0B92AB008D33F2 /* 57.wav in Resources */,
+				2503EA602C0B92AB008D33F2 /* 40.wav in Resources */,
 				253B3ECD2A608A0500566287 /* Preview Assets.xcassets in Resources */,
+				2503EA5F2C0B92AB008D33F2 /* 38.wav in Resources */,
 				253B3ECA2A608A0500566287 /* Assets.xcassets in Resources */,
-				2534BF0E2A8B43D100073F24 /* midi in Resources */,
+				2503EA632C0B92AB008D33F2 /* 46.wav in Resources */,
+				253558AD2C28E62C00B26D77 /* Silent.wav in Resources */,
+				253558B62C2949C100B26D77 /* Minecraft.ttf in Resources */,
+				2503EA622C0B92AB008D33F2 /* 42.wav in Resources */,
+				2503EA642C0B92AB008D33F2 /* 49.wav in Resources */,
+				253558B42C2948C500B26D77 /* VCR_OSD_MONO_1.001.ttf in Resources */,
+				2503EA5E2C0B92AB008D33F2 /* 36.wav in Resources */,
+				2503EA612C0B92AB008D33F2 /* 41.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,10 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2503E8B92BF6BCE2008D33F2 /* NoteVisualizer.swift in Sources */,
 				2503E8B12BF69930008D33F2 /* AlertItem.swift in Sources */,
 				253B3EF02A608A6300566287 /* Upload_File.swift in Sources */,
 				2503E8C22BF6BE91008D33F2 /* GameView.swift in Sources */,
+				253558AB2C28B5CF00B26D77 /* Font.swift in Sources */,
 				2503E8B52BF69BC4008D33F2 /* Queue.swift in Sources */,
 				2503E8AC2BF66B58008D33F2 /* HomeViewModel.swift in Sources */,
 				257359702A64C7A300D9D536 /* MIDIParser.swift in Sources */,
@@ -386,8 +442,10 @@
 				2503E8BE2BF6BE38008D33F2 /* MenuView.swift in Sources */,
 				2534BEF52A887A8000073F24 /* HomeView.swift in Sources */,
 				25E7B2E32A71BEDB007635FE /* testing.swift in Sources */,
+				2503EA692C14D252008D33F2 /* InstrumentUtils.swift in Sources */,
 				2503E8C02BF6BE5B008D33F2 /* CountdownView.swift in Sources */,
 				253B3EC62A608A0400566287 /* DrumApp.swift in Sources */,
+				253558B12C29431B00B26D77 /* NoteVisualizer.swift in Sources */,
 				2503E8B72BF6B4D5008D33F2 /* Nodes.swift in Sources */,
 				2534BEF72A887B4F00073F24 /* LoadingView.swift in Sources */,
 				2503E8B32BF699F9008D33F2 /* LoadingViewModel.swift in Sources */,
@@ -554,6 +612,7 @@
 				DEVELOPMENT_TEAM = LA74DB9X89;
 				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Drum-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -586,6 +645,7 @@
 				DEVELOPMENT_TEAM = LA74DB9X89;
 				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Drum-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
