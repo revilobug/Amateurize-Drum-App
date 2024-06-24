@@ -1,5 +1,5 @@
 //
-//  NoteVisualizer.swift
+//  Font.swift
 //  Drum App
 //
 //  Created by Oliver Li on 6/23/24.
