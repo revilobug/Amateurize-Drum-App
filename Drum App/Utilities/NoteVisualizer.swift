@@ -56,7 +56,7 @@ final class Track {
             {
                 let node = rendered.popFirst()
                 if soundOn {
-                    s.run(SKAction.playSoundFileNamed(String(node!.midiKey), waitForCompletion: false))
+                    node?.playSound()
                 }
                 node!.removeFromParent()
                 rightIndex += 1

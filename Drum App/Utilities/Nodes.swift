@@ -118,7 +118,13 @@ final class NoteNode: SKNode
     
     func playSound ()
     {
-        run(SKAction.playSoundFileNamed(String(self.midiKey), waitForCompletion: false))
+        let soundName = String(self.midiKey)
+        if let soundPath = Bundle.main.path(forResource: soundName, ofType: "wav") {
+            run(SKAction.playSoundFileNamed(soundPath, waitForCompletion: false))
+        } else {
+            print("Error: Sound file \(soundName).wav not found")
+            // Optionally, handle the error further, e.g., show an alert to the user
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
