@@ -45,6 +45,7 @@ final class Track {
         }
         
         self.targetNode.changeInstrument(to: track[rightIndex].nKey)
+        self.targetNode.update()
     }
     
     func update(distanceElapsed: Double, soundOn: Bool = true)
@@ -56,7 +57,8 @@ final class Track {
             {
                 let node = rendered.popFirst()
                 if soundOn {
-                    node?.playSound()
+                    s.run(SKAction.playSoundFileNamed(String(node!.midiKey), waitForCompletion: false))
+                    self.targetNode.hit()
                 }
                 node!.removeFromParent()
                 rightIndex += 1
@@ -81,6 +83,8 @@ final class Track {
         }
         else
         {
+            print("\(distanceElapsed)")
+
             leftIndex -= 1
             while leftIndex > 0 && Double(track[leftIndex].xPos!) < s.windowLeft
             {
@@ -181,6 +185,10 @@ final class MidiScene : SKScene {
                         
         for index in 0..<song.count {
             var note = song[index]
+            
+            if note.nVelocity != 80 {
+                print("(\(note.nVelocity))")
+            }
             let songTime = Float(note.nStartTime) / 1_000_000 * Float(tickLength)
             note.xPos = Float(spawnPosition) + ((-1) * songTime * Float(scrollSpeed))
 
@@ -207,7 +215,7 @@ final class MidiScene : SKScene {
             addChild(track.targetNode)
         }
 
-        run(SKAction.playSoundFileNamed("Silent", waitForCompletion: false))
+        run(SKAction.playSoundFileNamed("init", waitForCompletion: false))
     }
 
     func changeBPM(newBPM: UInt32)

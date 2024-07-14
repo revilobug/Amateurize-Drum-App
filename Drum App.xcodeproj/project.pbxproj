@@ -27,11 +27,26 @@
 		253B3ED72A608A0600566287 /* Drum_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3ED62A608A0600566287 /* Drum_AppTests.swift */; };
 		253B3EE12A608A0600566287 /* Drum_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EE02A608A0600566287 /* Drum_AppUITests.swift */; };
 		253B3EE32A608A0600566287 /* Drum_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EE22A608A0600566287 /* Drum_AppUITestsLaunchTests.swift */; };
-		253B3EF02A608A6300566287 /* Upload_File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EEF2A608A6300566287 /* Upload_File.swift */; };
+		253B3EF02A608A6300566287 /* UploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B3EEF2A608A6300566287 /* UploadFile.swift */; };
 		257359702A64C7A300D9D536 /* MIDIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573596F2A64C7A300D9D536 /* MIDIParser.swift */; };
+		257427602C4322CB00C2B0D6 /* 36.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2574274F2C4322CB00C2B0D6 /* 36.wav */; };
+		257427612C4322CB00C2B0D6 /* 38.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427502C4322CB00C2B0D6 /* 38.wav */; };
+		257427622C4322CB00C2B0D6 /* 40.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427512C4322CB00C2B0D6 /* 40.wav */; };
+		257427632C4322CB00C2B0D6 /* 41.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427522C4322CB00C2B0D6 /* 41.wav */; };
+		257427642C4322CB00C2B0D6 /* 42.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427532C4322CB00C2B0D6 /* 42.wav */; };
+		257427652C4322CB00C2B0D6 /* 43.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427542C4322CB00C2B0D6 /* 43.wav */; };
+		257427662C4322CB00C2B0D6 /* 44.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427552C4322CB00C2B0D6 /* 44.wav */; };
+		257427672C4322CB00C2B0D6 /* 46.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427562C4322CB00C2B0D6 /* 46.wav */; };
+		257427682C4322CB00C2B0D6 /* 47.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427572C4322CB00C2B0D6 /* 47.wav */; };
+		257427692C4322CB00C2B0D6 /* 48.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427582C4322CB00C2B0D6 /* 48.wav */; };
+		2574276A2C4322CB00C2B0D6 /* 49.wav in Resources */ = {isa = PBXBuildFile; fileRef = 257427592C4322CB00C2B0D6 /* 49.wav */; };
+		2574276B2C4322CB00C2B0D6 /* 50.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2574275A2C4322CB00C2B0D6 /* 50.wav */; };
+		2574276C2C4322CB00C2B0D6 /* 51.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2574275B2C4322CB00C2B0D6 /* 51.wav */; };
+		2574276D2C4322CB00C2B0D6 /* 57.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2574275C2C4322CB00C2B0D6 /* 57.wav */; };
+		2574276E2C4322CB00C2B0D6 /* 59.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2574275D2C4322CB00C2B0D6 /* 59.wav */; };
+		2574276F2C4322CB00C2B0D6 /* init.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2574275E2C4322CB00C2B0D6 /* init.wav */; };
 		258157E52A9493470053C7D3 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 258157E42A9493470053C7D3 /* DequeModule */; };
 		25E22F632A7597DD00030B56 /* Smells_Like_Teen_Spirit_.mid in Resources */ = {isa = PBXBuildFile; fileRef = 25E22F622A7597DD00030B56 /* Smells_Like_Teen_Spirit_.mid */; };
-		25E7B2E32A71BEDB007635FE /* testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7B2E22A71BEDB007635FE /* testing.swift */; };
 		25E7B2E52A7311D5007635FE /* BackwardStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E7B2E42A7311D5007635FE /* BackwardStream.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,10 +92,25 @@
 		253B3EDC2A608A0600566287 /* Drum AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drum AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		253B3EE02A608A0600566287 /* Drum_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drum_AppUITests.swift; sourceTree = "<group>"; };
 		253B3EE22A608A0600566287 /* Drum_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drum_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		253B3EEF2A608A6300566287 /* Upload_File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload_File.swift; sourceTree = "<group>"; };
+		253B3EEF2A608A6300566287 /* UploadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFile.swift; sourceTree = "<group>"; };
 		2573596F2A64C7A300D9D536 /* MIDIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIParser.swift; sourceTree = "<group>"; };
+		2574274F2C4322CB00C2B0D6 /* 36.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 36.wav; sourceTree = "<group>"; };
+		257427502C4322CB00C2B0D6 /* 38.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 38.wav; sourceTree = "<group>"; };
+		257427512C4322CB00C2B0D6 /* 40.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 40.wav; sourceTree = "<group>"; };
+		257427522C4322CB00C2B0D6 /* 41.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 41.wav; sourceTree = "<group>"; };
+		257427532C4322CB00C2B0D6 /* 42.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 42.wav; sourceTree = "<group>"; };
+		257427542C4322CB00C2B0D6 /* 43.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 43.wav; sourceTree = "<group>"; };
+		257427552C4322CB00C2B0D6 /* 44.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 44.wav; sourceTree = "<group>"; };
+		257427562C4322CB00C2B0D6 /* 46.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 46.wav; sourceTree = "<group>"; };
+		257427572C4322CB00C2B0D6 /* 47.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 47.wav; sourceTree = "<group>"; };
+		257427582C4322CB00C2B0D6 /* 48.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 48.wav; sourceTree = "<group>"; };
+		257427592C4322CB00C2B0D6 /* 49.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 49.wav; sourceTree = "<group>"; };
+		2574275A2C4322CB00C2B0D6 /* 50.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 50.wav; sourceTree = "<group>"; };
+		2574275B2C4322CB00C2B0D6 /* 51.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 51.wav; sourceTree = "<group>"; };
+		2574275C2C4322CB00C2B0D6 /* 57.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 57.wav; sourceTree = "<group>"; };
+		2574275D2C4322CB00C2B0D6 /* 59.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 59.wav; sourceTree = "<group>"; };
+		2574275E2C4322CB00C2B0D6 /* init.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = init.wav; sourceTree = "<group>"; };
 		25E22F622A7597DD00030B56 /* Smells_Like_Teen_Spirit_.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = Smells_Like_Teen_Spirit_.mid; sourceTree = SOURCE_ROOT; };
-		25E7B2E22A71BEDB007635FE /* testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testing.swift; sourceTree = "<group>"; };
 		25E7B2E42A7311D5007635FE /* BackwardStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +174,7 @@
 		2503E8AF2BF69913008D33F2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				253B3EEF2A608A6300566287 /* Upload_File.swift */,
+				253B3EEF2A608A6300566287 /* UploadFile.swift */,
 				2573596F2A64C7A300D9D536 /* MIDIParser.swift */,
 				25E7B2E42A7311D5007635FE /* BackwardStream.swift */,
 				2503E8B02BF69930008D33F2 /* AlertItem.swift */,
@@ -204,13 +234,13 @@
 		253B3EC42A608A0400566287 /* Drum App */ = {
 			isa = PBXGroup;
 			children = (
+				2574275F2C4322CB00C2B0D6 /* Drum Assets */,
 				253558B22C29470300B26D77 /* Drum-App-Info.plist */,
 				2503E8AF2BF69913008D33F2 /* Utilities */,
 				2503E8AE2BF698FB008D33F2 /* Views */,
 				253B3EC52A608A0400566287 /* DrumApp.swift */,
 				253B3EC92A608A0500566287 /* Assets.xcassets */,
 				253B3ECB2A608A0500566287 /* Preview Content */,
-				25E7B2E22A71BEDB007635FE /* testing.swift */,
 			);
 			path = "Drum App";
 			sourceTree = "<group>";
@@ -239,6 +269,29 @@
 				253B3EE02A608A0600566287 /* Drum_AppUITests.swift */,
 			);
 			path = "Drum AppUITests";
+			sourceTree = "<group>";
+		};
+		2574275F2C4322CB00C2B0D6 /* Drum Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2574274F2C4322CB00C2B0D6 /* 36.wav */,
+				257427502C4322CB00C2B0D6 /* 38.wav */,
+				257427512C4322CB00C2B0D6 /* 40.wav */,
+				257427522C4322CB00C2B0D6 /* 41.wav */,
+				257427532C4322CB00C2B0D6 /* 42.wav */,
+				257427542C4322CB00C2B0D6 /* 43.wav */,
+				257427552C4322CB00C2B0D6 /* 44.wav */,
+				257427562C4322CB00C2B0D6 /* 46.wav */,
+				257427572C4322CB00C2B0D6 /* 47.wav */,
+				257427582C4322CB00C2B0D6 /* 48.wav */,
+				257427592C4322CB00C2B0D6 /* 49.wav */,
+				2574275A2C4322CB00C2B0D6 /* 50.wav */,
+				2574275B2C4322CB00C2B0D6 /* 51.wav */,
+				2574275C2C4322CB00C2B0D6 /* 57.wav */,
+				2574275D2C4322CB00C2B0D6 /* 59.wav */,
+				2574275E2C4322CB00C2B0D6 /* init.wav */,
+			);
+			path = "Drum Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +361,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					253B3EC12A608A0400566287 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -351,8 +404,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2574276C2C4322CB00C2B0D6 /* 51.wav in Resources */,
+				2574276A2C4322CB00C2B0D6 /* 49.wav in Resources */,
+				257427672C4322CB00C2B0D6 /* 46.wav in Resources */,
+				257427622C4322CB00C2B0D6 /* 40.wav in Resources */,
+				2574276E2C4322CB00C2B0D6 /* 59.wav in Resources */,
+				257427652C4322CB00C2B0D6 /* 43.wav in Resources */,
+				2574276F2C4322CB00C2B0D6 /* init.wav in Resources */,
+				257427682C4322CB00C2B0D6 /* 47.wav in Resources */,
+				257427662C4322CB00C2B0D6 /* 44.wav in Resources */,
 				253B3ECD2A608A0500566287 /* Preview Assets.xcassets in Resources */,
+				257427612C4322CB00C2B0D6 /* 38.wav in Resources */,
 				253B3ECA2A608A0500566287 /* Assets.xcassets in Resources */,
+				2574276B2C4322CB00C2B0D6 /* 50.wav in Resources */,
+				257427642C4322CB00C2B0D6 /* 42.wav in Resources */,
+				257427602C4322CB00C2B0D6 /* 36.wav in Resources */,
+				257427692C4322CB00C2B0D6 /* 48.wav in Resources */,
+				2574276D2C4322CB00C2B0D6 /* 57.wav in Resources */,
+				257427632C4322CB00C2B0D6 /* 41.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2503E8B12BF69930008D33F2 /* AlertItem.swift in Sources */,
-				253B3EF02A608A6300566287 /* Upload_File.swift in Sources */,
+				253B3EF02A608A6300566287 /* UploadFile.swift in Sources */,
 				2503E8C22BF6BE91008D33F2 /* GameView.swift in Sources */,
 				253558AB2C28B5CF00B26D77 /* Font.swift in Sources */,
 				2503E8B52BF69BC4008D33F2 /* Queue.swift in Sources */,
@@ -389,7 +458,6 @@
 				2503E8C52BF6BEF9008D33F2 /* Controller.swift in Sources */,
 				2503E8BE2BF6BE38008D33F2 /* MenuView.swift in Sources */,
 				2534BEF52A887A8000073F24 /* HomeView.swift in Sources */,
-				25E7B2E32A71BEDB007635FE /* testing.swift in Sources */,
 				2503EA692C14D252008D33F2 /* InstrumentUtils.swift in Sources */,
 				2503E8C02BF6BE5B008D33F2 /* CountdownView.swift in Sources */,
 				253B3EC62A608A0400566287 /* DrumApp.swift in Sources */,
@@ -437,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -470,6 +539,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -498,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -531,6 +602,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

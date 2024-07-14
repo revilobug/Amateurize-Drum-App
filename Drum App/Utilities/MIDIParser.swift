@@ -142,14 +142,14 @@ class MidiFile {
                     }
                     
                     if noteProcesser[Int(nNoteID) - DRUM_KEY_START] != nil{
-                        noteProcesser[Int(nNoteID) - DRUM_KEY_START]!.nDuration = wallTime - (noteProcesser[Int(nNoteID) - DRUM_KEY_START]!.nStartTime ?? 0)
+                        noteProcesser[Int(nNoteID) - DRUM_KEY_START]!.nDuration = wallTime - (noteProcesser[Int(nNoteID) - DRUM_KEY_START]!.nStartTime)
                     }
                 // Note On
                 case 0x90:
                     nPreviousStatus = nStatus
-                    var nChannel : UInt8 = nStatus & 0x0F
-                    var nNoteID : UInt8 = try inputStream.read8()
-                    var nNoteVelocity : UInt8 = try inputStream.read8()
+                    let nChannel : UInt8 = nStatus & 0x0F
+                    let nNoteID : UInt8 = try inputStream.read8()
+                    let nNoteVelocity : UInt8 = try inputStream.read8()
                     
                     if nChannel != UInt8(9) {
                         continue

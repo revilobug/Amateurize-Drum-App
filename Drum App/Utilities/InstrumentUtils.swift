@@ -7,6 +7,74 @@
 
 import Foundation
 
+enum InstrumentType: String {
+    case higherPitch = "Higher Pitch"
+    case lowerPitch = "Lower Pitch"
+    case cymbals = "Cymbals"
+    case hiHats = "Hi-Hats"
+    case percussion = "Percussion"
+    case noInstrumentType = "none"
+}
+
+func getInstrumentType(for key: UInt8) -> InstrumentType? {
+    let percussionMap: [UInt8: (String, InstrumentType)] = [
+        // Higher Pitch
+        38: ("Acoustic Snare", .higherPitch),
+        40: ("Electric Snare", .higherPitch),
+        48: ("Hi Mid Tom", .higherPitch),
+        50: ("High Tom", .higherPitch),
+        // Lower Pitch
+        35: ("Acoustic Bass Drum", .lowerPitch),
+        36: ("Bass Drum 1", .lowerPitch),
+        41: ("Low Floor Tom", .lowerPitch),
+        43: ("High Floor Tom", .lowerPitch),
+        45: ("Low Tom", .lowerPitch),
+        47: ("Low-Mid Tom", .lowerPitch),
+        // Cymbals
+        46: ("Open Hi-Hat", .cymbals),
+        49: ("Crash Cymbal 1", .cymbals),
+        51: ("Ride Cymbal 1", .cymbals),
+        52: ("Chinese Cymbal", .cymbals),
+        53: ("Ride Bell", .cymbals),
+        55: ("Splash Cymbal", .cymbals),
+        57: ("Crash Cymbal 2", .cymbals),
+        59: ("Ride Cymbal 2", .cymbals),
+        // Hi-Hats
+        42: ("Closed Hi-Hat", .hiHats),
+        44: ("Pedal Hi-Hat", .hiHats),
+        // Percussion (combined with others)
+        37: ("Side Stick", .percussion),
+        39: ("Hand Clap", .percussion),
+        54: ("Tambourine", .percussion),
+        56: ("Cowbell", .percussion),
+        58: ("Vibraslap", .percussion),
+        60: ("Hi Bongo", .percussion),
+        61: ("Low Bongo", .percussion),
+        62: ("Mute Hi Conga", .percussion),
+        63: ("Open Hi Conga", .percussion),
+        64: ("Low Conga", .percussion),
+        65: ("High Timbale", .percussion),
+        66: ("Low Timbale", .percussion),
+        67: ("High Agogo", .percussion),
+        68: ("Low Agogo", .percussion),
+        69: ("Cabasa", .percussion),
+        70: ("Maracas", .percussion),
+        71: ("Short Whistle", .percussion),
+        72: ("Long Whistle", .percussion),
+        73: ("Short Guiro", .percussion),
+        74: ("Long Guiro", .percussion),
+        75: ("Claves", .percussion),
+        76: ("Hi Wood Block", .percussion),
+        77: ("Low Wood Block", .percussion),
+        78: ("Mute Cuica", .percussion),
+        79: ("Open Cuica", .percussion),
+        80: ("Mute Triangle", .percussion),
+        81: ("Open Triangle", .percussion)
+    ]
+    
+    return percussionMap[key]?.1
+}
+
 func getInstrumentString(for key: UInt8) -> String? {
     let percussionMap: [UInt8: String] = [
         35: "Acoustic Bass Drum",
