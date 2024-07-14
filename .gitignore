@@ -1,0 +1,5 @@
+*.mid
+Drum\ AppTest/
+Drum\ AppUITests/
+Drum\ App/Preview\ Content/
+.build/
