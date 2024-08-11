@@ -14,7 +14,8 @@ But it was when I had committed myself to learning the piece from Whiplash that 
 
 Furthermore, knowing that some of the greatest players like Chad Smith and Buddy Rich never learned to read music altogether further radicalized me that good drumming came from grasping the feel of the rhythm rather than formalizing it into rigid time signatures. I felt like scored notation was hindering and limiting rather than assisting my understanding of music. It was in this state of mind that I first envisioned this project: a complete reduction of music into as simple of a representation as I could imagine. Mechanically following the app by playing note by note could in theory produce a faithful reproduction of a given song. Though in practice, this app is only meant to be the first step in learning a groove. It provides a low-cost entry to any rhythm by bridging the gap between technical proficiency and musical intuition, allowing players to develop their rhythm naturally without being bogged down by the intricacies of music theory. 
 
-## Demo and Features
+## Video Demo and Features
+Click the thumbnail for a video demo:
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ylDtQ4UvGfE/0.jpg)](https://www.youtube.com/watch?v=ylDtQ4UvGfE)
 
 ### Features:
